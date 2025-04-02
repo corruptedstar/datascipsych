@@ -2,9 +2,24 @@
 
 import numpy as np
 from scipy import stats
+<<<<<<< Updated upstream
  
 def ismissing(reponse):
    return np.array (reponse) == "n/a"
+=======
+
+def hello ():
+    """print 'hello world'. """
+    print ("hello world")
+
+def ismissing(response):
+  """ check if it is labled n/a"""
+  """takes in a `response` NumPy array and returns a boolean array that is `True` for items that are equal to `"n/a"`"""
+  response = np.array (response)
+  return response =="n/a" 
+
+    
+>>>>>>> Stashed changes
 
 def dprime(trial_type, response):
     """
