@@ -2,7 +2,9 @@
 
 import numpy as np
 from scipy import stats
-
+ 
+def ismissing(reponse):
+   return np.array (reponse) == "n/a"
 
 def dprime(trial_type, response):
     """
