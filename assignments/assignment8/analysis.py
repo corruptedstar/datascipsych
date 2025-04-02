@@ -19,6 +19,9 @@ def ismissing(response):
   return response =="n/a" 
 
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 def dprime(trial_type, response):
