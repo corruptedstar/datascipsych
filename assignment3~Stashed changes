@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "e29faf80-5bd6-4725-b63b-4e84f02c26c2",
+   "id": "32f9d7d4-8b65-493d-80ae-8bc8b3a53c2a",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -11,18 +11,18 @@
     "tags": []
    },
    "source": [
-    "# Assignment 4\n",
+    "# Assignment 3\n",
     "\n",
-    "Please fill in blanks in the *Answer* sections of this notebook. To check your answer for a problem, run the Setup, Answer, and Result sections. DO NOT MODIFY SETUP OR RESULT CELLS. See the [README](https://github.com/mortonne/datascipsych) for instructions on setting up a Python environment to run this notebook.\n",
+    "Please fill in blanks in this notebook. See the [README](https://github.com/mortonne/datascipsych) for instructions on setting up a Python environment to run this notebook.\n",
     "\n",
-    "Write your answers for each problem. Then restart the kernel, run all cells, and then save the notebook. Upload your notebook to Canvas.\n",
+    "Write your answers for each problem, then run all cells. Upload your notebook to Canvas.\n",
     "\n",
     "If you get stuck, read through the other notebooks in this directory, ask us for help in class, or ask other students for help in class or on the weekly discussion board."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "d3243f40-989f-4544-9493-0a0377962ad1",
+   "id": "bc3b0906-de4b-41dc-bf48-c4331b28babb",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -31,13 +31,219 @@
     "tags": []
    },
    "source": [
-    "## Problem: creating a function (2 points)\n",
-    "Write a function called `mult_pi` that takes in some number and multiplies it by pi. Hint: you will need to import a module. Include a docstring that says \"Multiply by pi.\" 1 point for writing the function correctly; 1 point for including the docstring correctly."
+    "## Sample problem (not graded)\n",
+    "First, let's go through a sample problem to show you how this works. You'll see problems below to fill out. They will have instructions, often some sort of data to work with, and a space to fill in your answer. For example:"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "2ba42562-db94-40bf-9f40-c5d032c82240",
+   "id": "7a41cc78-bd96-424c-95c7-a156cdfa735d",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Problem\n",
+    "Use f-strings to greet a user. Given a greeting string and a user string, make a string of `\"[greeting] [user]\"` using f-strings."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff9dcdf7-6bea-414f-b31d-7da456c9eed0",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "#### Setup\n",
+    "There will usually be a *Setup* cell that defines some variables. Often it will initialize a variable that you need to modify. Here, the `message` variable will hold the greeting string that you will make. We initialize it in the *Setup* cell so that the *Result* cell will run without an error even if haven't written your answer yet."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "783b272b-9d67-4282-b6a3-a97cf9975767",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "greeting = \"hello\"  # string to greet the user\n",
+    "user = \"world\"  # user to greet\n",
+    "message = None  # you will overwrite this variable with your message"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2381e832-d7af-44a8-a504-ebb62ba2bcb3",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "#### Answer\n",
+    "This is the only part that you should change. You will edit the code cell in the *Answer* section to add your code (you can replace the `# your code here` placeholder)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "41097b83-2adc-4f69-8716-036e059a462b",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "good morning, liv\n"
+     ]
+    }
+   ],
+   "source": [
+    "greeting = \"good morning, \"\n",
+    "user = \"liv\"\n",
+    "message = f\"{greeting}{user}\" \n",
+    "print(message)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ea6e710c-cf24-4076-9db0-1339ff48bddc",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "#### Result\n",
+    "\n",
+    "This part is just here to display the results of running your code. You won't edit this part."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "e749216e-6392-4d87-ba81-b9e5eec2b727",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "good morning, liv\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(message)  # displays the message that you created in the Answer cell"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "212f15fc-8f7d-4359-bc48-f53b910506f7",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Writing a solution"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "97450d5c-4fe3-4d81-9ac3-75aab99bb1e8",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "The `message` variable is initially defined as `None` (this makes it so the *Result* section runs without errors, even if you haven't finished the problem yet). You should put your code in the *Answer* section to assign `message` to the correct value. For example, here is a solution:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "db31017d-de39-4902-91bf-bf1c072baf81",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "message = f\"{greeting} {user}\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22b8c8fe-535a-44c4-a576-14ce6f853e78",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "If you placed this in the *Answer* section, you would get full credit for this problem. Try copying and pasting the above code into the *Answer* section, and see how the *Result* section changes to display the correct message instead of `None` when you run all the cells."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2572191d-7db1-4271-a105-29132ca4aceb",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem: Calculating mathmatical expressions (2 points)\n",
+    "\n",
+    "Use Python operators and the `math` module to calculate $x = \\frac{1}{2} + cos(\\pi)^2$.\n",
+    "\n",
+    "Hint: use `help(math)` to see functions and data that are available in the `math` module."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff9ce5af-3b8c-4b65-8782-01ab21e4cdf2",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -51,8 +257,33 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 108,
-   "id": "fe2c9292-107c-4eee-b88c-58504eeab7ab",
+   "execution_count": 7,
+   "id": "e93708e5-2125-4027-ab4e-16f1ee47b358",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "x = None  # assign your answer to this variable"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9c51a899-9996-4710-90cb-88e0e9c08b76",
+   "metadata": {},
+   "source": [
+    "### Answer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "b012fd60-99a2-41ce-aec9-25c838b72860",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -371,47 +602,15 @@
     }
    ],
    "source": [
-    "mult_pi = None\n",
+    "# your code here\n",
+    "help(math)\n",
     "import math\n",
-    "help(math)"
+    "X=1/2+(math.cos(math.pi)**2)"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "5be13dad-a807-4303-8d30-d8aaea1b2e77",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 109,
-   "id": "bf9f5653-bdab-47ae-912d-91763828fe04",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "pi= 3.141592653589793\n",
-    "def mult_pi (p):\n",
-    "    return p * pi\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "d6d4bba7-200d-47c9-a21f-5f504b4e8ea2",
+   "id": "4a21da60-1319-4e7d-8c82-74fc0fae9d13",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -425,10 +624,10 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 110,
-   "id": "f53e60dc-6a90-452f-accf-7e841be9d705",
+   "execution_count": 9,
+   "id": "77b25962-bd8c-4ae1-a44c-9e0dc2617695",
    "metadata": {
-    "editable": true,
+    "editable": false,
     "slideshow": {
      "slide_type": ""
     },
@@ -439,281 +638,17 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "21.991148575128552\n",
-      "Help on function mult_pi in module __main__:\n",
-      "\n",
-      "mult_pi(p)\n",
-      "\n"
-     ]
-    }
-   ],
-   "source": [
-    "if mult_pi is not None:\n",
-    "    # test calling the function\n",
-    "    print(mult_pi(7))\n",
-    "    \n",
-    "    # display help documentation for the function\n",
-    "    help(mult_pi)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "029ab4f0-8fdb-4711-af16-c16c4454cfc9",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "## Problem: function inputs (2 points)\n",
-    "Create a function called `shift_and_scale` that takes a number `x` and calculates $\\text{shift} + x * \\text{scale}$. The `shift` input should be a keyword argument that defaults to 0, and the `scale` input should be a keyword argument that defaults to 1."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "24919119-2ded-4a93-b260-0b61972006ce",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Setup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 111,
-   "id": "3ae17a9e-3f32-4ef5-9a36-d463206adb2b",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "shift_and_scale = None"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "c2acf662-b933-4be8-b844-b182a0d1ca6f",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 112,
-   "id": "e196f2ed-4bc5-450f-9143-98d5ded096c4",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "def shift_and_scale (x, shift =0 , scale = 1):\n",
-    "    return shift + x * scale \n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "5961c69d-43a7-49a7-9f88-041189b5c644",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 113,
-   "id": "7e83fc10-8df4-4247-b5cf-afb3273bc63f",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "1.5\n",
-      "2.0\n"
-     ]
-    }
-   ],
-   "source": [
-    "if shift_and_scale is not None:\n",
-    "    # test calling the function with different inputs\n",
-    "    x = 1.5\n",
-    "    print(shift_and_scale(x))\n",
-    "    print(shift_and_scale(x, shift=-1, scale=2))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "528a14cf-191b-4fba-be17-fade0adcbb4b",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "## Problem: if/else statements (2 points)\n",
-    "Create a function called `isodd` that uses an `if/else` statement to test whether a number `x` is odd and return `True` if it is odd and `False` otherwise. To do this, you can use the modulo operator `%`. If `x % 2 == 0`, then `x` is an even number. If `x % 2 == 1`, then `x` is an odd number."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "161e77ce-e721-432c-a6c7-fd66ec91f33d",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Setup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 114,
-   "id": "94f84fe5-91f0-4766-8587-995bf15ce881",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "isodd = None"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "1706259d-0431-4267-8c12-b95fe66a7509",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 115,
-   "id": "7e41b8d2-7757-43f2-af68-9335d1d063d1",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "True\n",
-      "False\n"
-     ]
-    }
-   ],
-   "source": [
-    "def isodd (x):\n",
-    "    if x % 2 == 1:\n",
-    "        print (True)\n",
-    "    elif x % 2 == 0:\n",
-    "       print (False)\n",
-    "    else:\n",
-    "        print (False)\n",
-    "isodd (3)\n",
-    "isodd (12)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "a472037a-949c-4d35-ba91-67b8e88653ee",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 116,
-   "id": "770e3ff2-4465-48cd-8176-7540e38a0a43",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "True\n",
-      "None\n",
-      "False\n",
       "None\n"
      ]
     }
    ],
    "source": [
-    "if isodd is not None:\n",
-    "    # test calling the function with different inputs\n",
-    "    print(isodd(1))\n",
-    "    print(isodd(2))"
+    "print(x)"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "876f4624-ce22-4338-a78a-84fd9d081894",
+   "id": "bcb16eaa-3fa4-4003-907e-5b6b9c018cdf",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -722,137 +657,14 @@
     "tags": []
    },
    "source": [
-    "## Problem: using a for loop (2 points)\n",
-    "Create a function called `factorial` that uses a for loop to calculate $x!$. This is called a factorial. For example, $4! = 1 * 2 * 3 * 4 = 24$. Hint: you can create a variable called `f` that is initialized at 1 and multiply it with the next number on each step of a for loop."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9cba6729-fbc8-47a0-831d-f17c17fe5ad0",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Setup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 117,
-   "id": "b44580c4-b92f-4993-9da6-d955b89821ff",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "factorial = None"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f01afc3e-9ff3-4121-9efa-d083a1764f08",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 118,
-   "id": "85bf7a00-4639-485f-b94f-261b83cecc7e",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "def factorial(x):\n",
-    "    f = 1  \n",
-    "    for i in range(1, x + 1):  \n",
-    "        f *= i  \n",
-    "    return f\n",
-    "    \n",
+    "## Problem: making a list (2 points)\n",
     "\n",
-    "    "
+    "Create a list called `y` that has these items: 1, 2, 4, 8. Then use the `append` method to add 16 onto the end of the list. You should end up with a list that looks like `[1, 2, 4, 8, 16]`."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "213d2b1e-6bb5-4536-a3b8-fda808bc7862",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 119,
-   "id": "c3f0ed7b-e58b-4e42-96dc-6762370ccc3b",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "6\n",
-      "720\n"
-     ]
-    }
-   ],
-   "source": [
-    "if factorial is not None:\n",
-    "    # test calling the function with different inputs\n",
-    "    print(factorial(3))\n",
-    "    print(factorial(6))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "cea89081-cd34-4158-9d99-76b936db4382",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "## Problem: using for loops and if statements (2 points)\n",
-    "Create a function called `sum_small` that takes a list of numbers and calculates the sum of the \"small\" numbers that are less than 10. For example, if the numbers are 3, 12, 8, 4, 10, 0, then only the numbers 3, 8, 4, 0 should be summed, and the output should be 15."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f0fb9e27-2bfa-465a-8caf-58b96873f834",
+   "id": "f492bd9f-8dc6-4065-aa20-b238a111a6b0",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -866,256 +678,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
-   "id": "4043a242-d56e-461c-bec1-e961e8d79128",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "\n",
-    "sum_small = None"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "ac6f3f19-989b-4474-96cf-9aaf48013844",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 121,
-   "id": "7a7f662f-c798-48f1-8d1b-d3ed9fb9010c",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "def sum_small (numbers):\n",
-    "    total =0\n",
-    "    for n in numbers: \n",
-    "        if n < 10: \n",
-    "            total += n \n",
-    "    return total \n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "e05cb70f-391c-4c36-be96-73d109a48383",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 122,
-   "id": "ca496553-568a-40ac-a0a6-00711c1f54b6",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "15\n"
-     ]
-    }
-   ],
-   "source": [
-    "if sum_small is not None:\n",
-    "    # test calling the function\n",
-    "    print(sum_small([3, 12, 8, 4, 10, 0]))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "c7bb4abe-ca7f-4041-87fd-840820d03502",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "## Problem: list indexes and values (2 points)\n",
-    "Create a function called `print_list` that takes a list of numbers and uses a `for` loop to print the index of each element of the list and the corresponding value. For example, if we pass in the list `[3, 2, 1]`, then the function should print:\n",
-    "\n",
-    "```python\n",
-    "0 3\n",
-    "1 2\n",
-    "2 1\n",
-    "```"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "09d5a83f-d4f6-40b0-8b17-6391106e1cc4",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Setup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 123,
-   "id": "f6e49f0d-2cc7-454f-88b3-86a0ddd97163",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "print_list = None"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "0d4edfa1-d085-4746-938d-64f4802c42e3",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Answer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 124,
-   "id": "c2672487-80b8-4366-aaf2-ed4eaa8e6e3e",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "def print_list(numbers):\n",
-    "    for i, value in enumerate(numbers):\n",
-    "        print(i, value)\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "0df9fae8-608f-4b4d-bc5f-691c9e2ec7ab",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 125,
-   "id": "96f09c17-e7f0-4a01-a680-e877125c23ef",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "0 3\n",
-      "1 2\n",
-      "2 1\n",
-      "None\n"
-     ]
-    }
-   ],
-   "source": [
-    "if print_list is not None:\n",
-    "    # test calling the function\n",
-    "    print(print_list([3, 2, 1]))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "60e42070-24a4-4fba-9b52-413a70c07e9e",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "## Problem (graduate students): using functions (2 points)\n",
-    "Write a function called `mean` that takes in a list of response times (in seconds) and calculates the mean. The mean is defined as the sum divided by the number of samples (hint: try using the built-in `sum` and `len` functions). Use your function to calculate mean response time in two different conditions."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "66d198a9-a7d1-478b-aaca-f76ec53d84a3",
-   "metadata": {
-    "editable": true,
-    "slideshow": {
-     "slide_type": ""
-    },
-    "tags": []
-   },
-   "source": [
-    "### Setup"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 126,
-   "id": "2115d327-1bce-4602-912d-02e7dd3ab9a6",
+   "execution_count": 10,
+   "id": "5a76963e-06d8-4315-af97-fd43dbd03e55",
    "metadata": {
     "editable": false,
     "slideshow": {
@@ -1125,14 +689,12 @@
    },
    "outputs": [],
    "source": [
-    "response_time1 = [1.5, 2.1, 2.3, 1.8]  # response times (s) in condition 1\n",
-    "response_time2 = [1.7, 4.1, 1.3, 1.5]  # response times (s) in condition 2\n",
-    "mean = None"
+    "y = None  # assign your answer to this variable"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "61b837a2-3f1a-4e41-aaa4-73793b9eb42b",
+   "id": "81aecd79-6b94-422f-86a2-e72fbc272b53",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1146,8 +708,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 127,
-   "id": "4478d83b-624d-4fd7-9c2e-16d10bbef88a",
+   "execution_count": 11,
+   "id": "5a611c7f-c560-4556-8875-ef77e83e123c",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1157,12 +719,14 @@
    },
    "outputs": [],
    "source": [
-    "# your code here"
+    "# your code here\n",
+    "y = [\"1\",\"2\",\"4\",\"8\"]\n",
+    "y.append(\"16\")"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "a60ee5d0-32de-4cf5-a9f1-cccd8556cf58",
+   "id": "9e06a7ab-23ef-41dc-a7e3-bfb017a6bdc2",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1176,8 +740,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 128,
-   "id": "df40815e-1882-4c02-98c2-ad51a9ac1cd6",
+   "execution_count": 12,
+   "id": "9f760d33-8afa-4b5c-b003-a9bc4b9fe52c",
    "metadata": {
     "editable": false,
     "slideshow": {
@@ -1185,15 +749,22 @@
     },
     "tags": []
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['1', '2', '4', '8', '16']\n"
+     ]
+    }
+   ],
    "source": [
-    "if mean is not None:\n",
-    "    print(mean(response_time1), mean(response_time2))"
+    "print(y)"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "7394ab23",
+   "id": "474a2ac1-5822-4652-a924-0078c3568382",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1202,13 +773,14 @@
     "tags": []
    },
    "source": [
-    "## Problem (graduate students): analyzing conditions (2 points)\n",
-    "Say that you have data for 8 trials in a study. Each trial was in one of two conditions (condition 1 or condition 2). On each trial, the participant either answered correctly (coded as a 1) or incorrectly (coded as a 0). Use a `for` loop to calculate the total score for each condition, indicating how many correct answers there were in each condition."
+    "## Problem: accessing a list (2 points)\n",
+    "\n",
+    "Given a list `z = [1, 2, 3, 4, 5]`, use indexing to get the first item (`1`) and the last item (`5`). Use slicing to get the third and fourth items in a list (`[3, 4]`)."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "8db9e156",
+   "id": "aecc83fb-86ac-4200-be48-3c6e9d4bd838",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1222,47 +794,41 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 129,
-   "id": "4a404639",
-   "metadata": {},
+   "execution_count": 13,
+   "id": "d4c7b337-c4bc-40ea-a6bf-df8b059067f8",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
    "outputs": [],
    "source": [
-    "condition = [1, 1, 2, 2, 1, 1, 2, 2]  # condition label for each trial\n",
-    "correct   = [0, 1, 1, 1, 0, 0, 1, 0]  # 1 for correct, 0 for incorrect"
+    "z = [1, 2, 3, 4, 5]\n",
+    "first_item = None\n",
+    "last_item = None\n",
+    "third_and_fourth_list = None"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "7df30759",
-   "metadata": {},
+   "id": "c034309f-7fe2-42fe-853b-1e474812c63d",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
    "source": [
     "### Answer"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 130,
-   "id": "8e0a03e9",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "score1 = 0  # initial value; should indicate the total number correct in condition 1\n",
-    "score2 = 0  # initial value; should indicate the total number correct in condition 2\n",
-    "# write a for loop here"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "04d8e75a",
-   "metadata": {},
-   "source": [
-    "### Result"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 131,
-   "id": "7ab3cc80",
+   "execution_count": 21,
+   "id": "32b1c643-35ec-41d1-baac-8d36c846508d",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1275,17 +841,21 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "0 0\n"
+      "[1, 2, 3, 4, 5]\n"
      ]
     }
    ],
    "source": [
-    "print(score1, score2)"
+    "# your code here\n",
+    "print(z)\n",
+    "first_item=(z[0])\n",
+    "last_item=(z[4])\n",
+    "third_and_fourth_list=(z[2:4])"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "92ff64be-c9d1-4b2f-b5e5-f29e80a04cbe",
+   "id": "6fe3e579-da2d-4565-95e5-bb91bc94cde5",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1294,13 +864,56 @@
     "tags": []
    },
    "source": [
-    "## Problem (graduate students): using list comprehensions (2 points)\n",
-    "Say that you have a list of subject numbers 1, 2, and 3, and you need to make a list of full subject identifiers `\"sub-001\"`, `\"sub-002\"`, and `\"sub-003\"`. Use a list comprehension to create the subject identifiers from the numbers."
+    "### Result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "efe8f2d9-01cc-4cd8-a987-00ebf98e9297",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "5\n",
+      "[3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(first_item)\n",
+    "print(last_item)\n",
+    "print(third_and_fourth_list)"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "0309c974-26ab-49f5-8343-c688698f41c7",
+   "id": "60f9e822-8fb0-45a8-81cf-3a9e63a647d6",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem: making a dictionary (2 points)\n",
+    "\n",
+    "Create a dict called `letters` with keys `\"a\"`, `\"b\"`, and `\"c\"`, which have values of `1`, `2`, and `3` respectively. Then use assignment (like `mydict[new_key] = new_value`) to add another key, `\"d\"`, with a value of `4`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "13ec0767-b8d2-4751-9963-c261275533b6",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1314,10 +927,10 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 132,
-   "id": "b2c3af4c-ada8-40c0-a4e1-ba90abc1f5b5",
+   "execution_count": 24,
+   "id": "83913125-047b-4c87-8f54-0f8ad63ef8f2",
    "metadata": {
-    "editable": true,
+    "editable": false,
     "slideshow": {
      "slide_type": ""
     },
@@ -1325,13 +938,12 @@
    },
    "outputs": [],
    "source": [
-    "subject_numbers = [1, 2, 3]\n",
-    "subject_ids = None"
+    "letters = None"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "549cbd6b-30e1-4e48-819f-6ab6338ff902",
+   "id": "576a0d17-45da-4870-bba4-cb1cad497960",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1345,8 +957,395 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 133,
-   "id": "8de271f5-3ac1-471d-9fbd-c2efc27ec286",
+   "execution_count": 25,
+   "id": "be383289-023a-4825-9011-d9e193f91d78",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': 1, 'b': 2, 'c': 3, 'd': 4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "# your code here\n",
+    "letters = {\"a\": 1, \"b\": 2, \"c\": 3}\n",
+    "letters[\"d\"] = 4 \n",
+    "print (letters)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f05cc936-b1ed-466a-9fca-258ed8914815",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "428148ee-c60c-4cd2-a365-d2989019bcd5",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'a': 1, 'b': 2, 'c': 3, 'd': 4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(letters)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "567fb68b-af28-4d2f-bdcc-aa27d19ab6d1",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem: accessing a dictionary (2 points)\n",
+    "\n",
+    "Given a dictionary `participant_age`, get the age of participant `002`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26981242-8881-4174-a63a-3e73612a8d07",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Setup"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "0461769e-d8d7-48ee-ba16-99dcc59f2479",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "participant_age = {\"001\": 32, \"002\": 23, \"003\": 18}\n",
+    "age_002 = None"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "347f5165-14ff-4555-9353-dc28b204fbb2",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Answer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "c4488e56-efb7-482a-9234-d223dea1b81f",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# your code here\n",
+    "age_002=(participant_age[\"002\"])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ea911304-ce38-4464-a6bd-86cc0cc420c9",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "fb22d752-14fc-455a-baa2-303304ab69fe",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "23\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(age_002)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "27f8a3ea-4113-4a75-a751-02aa119c332b",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem: making a dictionary of lists (2 points)\n",
+    "Say that you have data for three participants in a psychology study. Each participant has an identifier, age, and accuracy on a memory test.\n",
+    "\n",
+    "| participant_id | age | accuracy |\n",
+    "| -------------- | --- | -------- |\n",
+    "| 001            | 24  | 0.85     |\n",
+    "| 002            | 21  | 0.72     |\n",
+    "| 003            | 33  | 0.92     |\n",
+    "\n",
+    "Create a dictionary called `data` with three keys: `\"participant_id\"`, `\"age\"`, and `\"accuracy\"`. The values of each key should be a list with the values for that column in the above table. The `participant_id` list should contain strings. The `age` list should contain integers. The `accuracy` list should contain floats."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9057f82b-bb0e-4548-b270-ec894e317896",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Setup"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "e36744f9-b666-49c1-9779-a7945a9f3986",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "data = None"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "325ceac4-4b52-4986-954e-af1777e2dc15",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Answer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "d321eaad-6c9f-4347-bddf-21842fff0340",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# your code here\n",
+    "data1= {\"participant_id\" : \"001\", \"age\" : 24, \"accuracy\":0.85}\n",
+    "data2= {\"participant_id\" : \"002\", \"age\": 21, \"accuracy\":0.73}\n",
+    "data3= {\"participant_id\" : \"003\", \"age\": 33, \"accuracy\":0.92}\n",
+    "data= (data1, data2, data3)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ace608b0-0147-40db-a070-f1e56ff8ea2e",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "d2d6995c-9807-4fce-9846-068eeefedbe2",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "({'participant_id': '001', 'age': 24, 'accuracy': 0.85}, {'participant_id': '002', 'age': 21, 'accuracy': 0.73}, {'participant_id': '003', 'age': 33, 'accuracy': 0.92})\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4d7cda94-2f8f-4386-8be4-7625798a99b8",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "This would be a correct answer to this question, which you could place in the *Answer* cell."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "024cac4e-eb2d-41c6-b991-4d498f456865",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem (graduate students): calculating expected forgetting (2 points)\n",
+    "Use Python expressions and the `math` module to calculate the expected fraction of memorized material that will be forgotten after 100 minutes, according to [Ebbinghaus' formula](https://en.wikipedia.org/wiki/Forgetting_curve) for forgetting:\n",
+    "\n",
+    "$b = \\frac{k}{log_{10}(t)^{c} + k}$\n",
+    "\n",
+    "Hint: use `help(math)` to see the functions that are available in the math module. Use parentheses (`()`) to group expressions together."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87ba1b4f-52a6-4a53-b100-fd9ae0e0a04f",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Setup"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "258ecd6d-fdfa-4800-a8ca-52cbdf22d309",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "t = 100  # 100 minutes\n",
+    "c = 1.25  # value that Ebbinghaus estimated based on his forgetting data\n",
+    "k = 1.84  # value that Ebbinghaus estimated based on his forgetting data\n",
+    "b = None"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3b1f113a-c67e-435e-b11b-d11f69faa61b",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Answer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "ea33921c-3d5c-4042-9194-23712073c492",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1361,7 +1360,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cb70473b-5a15-46d3-bb7f-7d113af2f782",
+   "id": "2509234f-5945-4326-a498-76cd29137694",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1375,8 +1374,214 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 134,
-   "id": "2fad50d6-8b92-4ed6-b78e-3400e91722a7",
+   "execution_count": 25,
+   "id": "20d19cb8-e848-47d5-ad04-a1d1f835821c",
+   "metadata": {
+    "editable": false,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d286eafe-63bd-4493-aba0-75dbd379ff1a",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem (graduate students): floating-point arithmetic (2 points)\n",
+    "\n",
+    "When we run the below code, we get a strange result."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "af90049b-4ae7-4b32-a5b1-32874d2ba509",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = 0.1 + 0.2\n",
+    "a == 0.3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e334526c-e1b5-4374-8944-0d0215c45727",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "We know that $0.1 + 0.2 = 0.3$, but Python tells us that `a` does not equal `0.3`. Read the Python [tutorial](https://docs.python.org/3/tutorial/floatingpoint.html) for an explanation of floating-point numbers.\n",
+    "\n",
+    "If we want to test that `a` is very close to 0.3, how can we check this? The tutorial describes two methods, using `math.isclose` or `round`. Use one of them below. Your code should compare `a` to `0.3` and return `True`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "72683ab8-2b07-4b53-a087-78f611ae7b3b",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a77c80ea-4963-45a4-afe2-a8e6828f41ce",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "## Problem (graduate students): using JSON (2 points)\n",
+    "\n",
+    "The built-in `json` module can be used to read JSON files or strings. Read the provided string into a Python dictionary using the `json.loads` function. Here, we define the text data corresonding to a JSON file using Python's triple quote (`\"\"\"`) syntax, which allows us to create a string with multiple lines of text. After reading the JSON data into a dictionary, use dictionary indexing to access the string that describes the `age` variable.\n",
+    "\n",
+    "Run `help(json.loads)` or `json.loads?` to see information about the function in Jupyter."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3df165c6-5886-4ba2-abad-2d1cb952d3f9",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Setup"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "304f2511-45b3-4e22-82f5-5ec340d037d7",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import json\n",
+    "json_string = \"\"\"\n",
+    "{\n",
+    "  \"participant_id\": {\n",
+    "    \"Description\": \"Participant identifier\"\n",
+    "  },\n",
+    "  \"age\": {\n",
+    "    \"Description\": \"Age in years\"\n",
+    "  },\n",
+    "  \"sex\": {\n",
+    "    \"Description\": \"Sex self-rated by participant, M for male/F for female\"\n",
+    "  }\n",
+    "}\n",
+    "\"\"\"\n",
+    "age_description = None"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca9f20cd-7f5e-432a-86ca-ae500b7805b1",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Answer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "ae924e68-de44-4e6d-8f6f-c4cb8152378e",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9eff4f50-73be-42ef-b138-be647ca83350",
+   "metadata": {
+    "editable": true,
+    "slideshow": {
+     "slide_type": ""
+    },
+    "tags": []
+   },
+   "source": [
+    "### Result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "5c09252c-3153-4bf3-8dd9-3626021ecfd3",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1394,12 +1599,12 @@
     }
    ],
    "source": [
-    "print(subject_ids)"
+    "print(age_description)"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "64fc4478-d112-452f-aa63-2500bbbd80ee",
+   "id": "6b3db79e-2bc0-4e2c-a4bf-960b31362527",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1408,13 +1613,14 @@
     "tags": []
    },
    "source": [
-    "## Problem (graduate students): printing instructions (2 points)\n",
-    "Say that we have three conditions in an experiment, and each one has different instructions for what the participant should do when a word shows up on screen. Define a function called `instruct` that uses an `if/elif/else` statement to print out the correct instructions depending on the condition. If the condition doesn't match condition 1, 2, or 3, raise an exception instead, with a `ValueError`."
+    "## Problem (graduate students): using sets (2 points)\n",
+    "\n",
+    "Read about [sets](https://docs.python.org/3/tutorial/datastructures.html#sets) in the Python tutorial. Given two sets of participant identifiers, use the set operation `|` and the `in` keyword to test if participant `\"004\"` is in either set."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "f4a0a779-2416-44e0-802d-975300236848",
+   "id": "730dcbad-5cf9-4862-aef4-920efe9ee9fb",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1428,10 +1634,10 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 135,
-   "id": "9323e5fd-abc8-48f0-b76a-db7a4d31ded8",
+   "execution_count": 31,
+   "id": "aa7658ca-d7df-44c4-840b-311101aec224",
    "metadata": {
-    "editable": true,
+    "editable": false,
     "slideshow": {
      "slide_type": ""
     },
@@ -1439,16 +1645,14 @@
    },
    "outputs": [],
    "source": [
-    "instruct1 = \"Read the word out loud.\"  # instructions for condition 1\n",
-    "instruct2 = \"Read the word silently.\"  # instructions for condition 2\n",
-    "instruct3 = \"Type the word.\"  # instructions for condition 3\n",
-    "error_message = \"Error: condition code unknown.\"  # raise exception if condition not 1, 2, or 3\n",
-    "instruct = None"
+    "participant_set1 = {\"001\", \"002\", \"003\"}\n",
+    "participant_set2 = {\"004\", \"005\", \"006\"}\n",
+    "is_004_included = None"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "a928ffd0-9f60-4d12-8fd8-27da3110f6cf",
+   "id": "d453faee-ded8-46e1-a836-c8655904cdb2",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1462,8 +1666,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 136,
-   "id": "8f500ec4-e462-4d05-b4da-062c332673b3",
+   "execution_count": 32,
+   "id": "b9f3efe5-6b39-437b-b7aa-a11e58613e93",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1478,7 +1682,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "83378971-f678-4d34-af16-7041b470d1a6",
+   "id": "61f0d676-7b53-4710-8386-00d2b8eaaf64",
    "metadata": {
     "editable": true,
     "slideshow": {
@@ -1492,28 +1696,32 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 137,
-   "id": "e7179bd3-07b7-4f97-bd6a-3ad510ccd572",
+   "execution_count": 33,
+   "id": "6d7572b0-ecb0-4a3e-9ddc-c70581639f47",
    "metadata": {
-    "editable": true,
+    "editable": false,
     "slideshow": {
      "slide_type": ""
     },
     "tags": []
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "None\n"
+     ]
+    }
+   ],
    "source": [
-    "if instruct is not None:\n",
-    "    instruct(1)\n",
-    "    instruct(2)\n",
-    "    instruct(3)\n",
-    "    instruct(-1)  # an invalid condition code. THIS IS SUPPOSED TO THOW AN ERROR."
+    "print(is_004_included)"
    ]
   }
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python 3 (ipykernel)",
    "language": "python",
    "name": "python3"
   },
